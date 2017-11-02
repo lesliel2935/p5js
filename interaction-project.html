@@ -18,14 +18,14 @@
         }
 
         function mouseMoved() {
-         fill(random(255),random(255),random(255))
+         fill(random(255),random(255),random(255))//color of heart
           noStroke()
          //heart
          ellipse(mouseX+scale*21,mouseY+scale*40,scale*40,scale*40)
          ellipse(mouseX+scale*58,mouseY+scale*40,scale*40,scale*40)
          quad(mouseX+scale*40,mouseY+scale*90,mouseX+scale*4,mouseY+scale*50,mouseX+scale*76,mouseY+scale*50)
         
-        stroke(random(255),random(255),random(255),100)
+        stroke(random(255),random(255),random(255),100)//color of lines
          //random lines
          line(mouseX+scale*40,mouseY+scale*50,random(600),random(600))
          line(mouseX+scale*40,mouseY+scale*50,random(600),random(600))
@@ -34,13 +34,13 @@
         }
         function mouseDragged(){//When drag the mouse heart would get bigger
         noStroke()
-        fill(random(255),random(255),random(255))
+        fill(random(255),random(255),random(255))//color of heart
          //heart
          quad(mouseX+scale*40,mouseY+scale*90,mouseX+scale*4,mouseY+scale*50,mouseX+scale*76,mouseY+scale*50)
          ellipse(mouseX+scale*21,mouseY+scale*40,scale*40,scale*40)
          ellipse(mouseX+scale*58,mouseY+scale*40,scale*40,scale*40)
         
-        stroke(random(255),random(255),random(255),100)
+        stroke(random(255),random(255),random(255),100)//color of lines
          //random lines
          line(mouseX+scale*40,mouseY+scale*50,random(600),random(600))
          line(mouseX+scale*40,mouseY+scale*50,random(600),random(600))
