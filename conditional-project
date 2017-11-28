@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -6,50 +7,61 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
     
     <script>
+    var x;
+    var y;
+    var z;  
+    var q;
+    var t;
+    var k;
+    var speed;
+    var score;
         function setup() {
-            createCanvas(1000,1000);
+            createCanvas(500,400);
+        //variables set to value needed
+            x = 250;
+            y = 0;
+            z = random(500)
+            q = random(100)
+            t = random(600)
+            k = random(200)
+            speedZ = .50
+            speedQ = 0.75
+            speedT = 1
+            speedK = 0.55
+           
         }
+
         function draw() {
-        //Hair
-        stroke(90,0,0)//Hair color Brown
-        line(370,250,400,280)
-        line(400,250,400,280)
-        line(400,280,430,250)
-        strokeWeight(10)
-        stroke("Black")
-       
-        //Tittle
-        fill(0,150,200)
-        textStyle("Bold")
-        textSize(50)
-        text("TSUM TSUM",250,160)
+            background(0);
+                  rectMode(CENTER)
+            
+            //falling circles
+            ellipse(z+random(0),speedZ*y++,50,50)
+            ellipse(q+random(2-3),speedQ*y++,50,50)
+            ellipse(t+random(14-15),speedT*y++,50,50)
+            ellipse(k+random(20-21),speedK*y++,50,50)
+            
+            rect(x,400,100,100)//box
         
-        //Box of tittle
-        noFill()
-        rect(250,100,300,100)
-        
-        ellipse(400,430,300,300)//Head 
-        //Eyes
-        fill("Black")
-        ellipse(360,400,30,30)
-        ellipse(440,400,30,30)
-       
-        //Nose
-        fill("Orange")
-        ellipse(400,450,50,50)
-       
-        //Smile
-        noFill()
-        curve(320,450,350,520,440,520,460,450)//not learned
-        
-         
         }
-    </script>
+        
+        function keyPressed(){
+            if (keyCode === RIGHT_ARROW){
+                x = x+50
+                //box move to right
+            }
+            if (keyCode === LEFT_ARROW){
+                x = x-50
+                //box move to left
+            }
+        }
+  
+  </script>
 </head>
 
 <body>
     <div id="code" class="container-fluid">
-        <script src="https://gist-it.appspot.com/github/lesliel2935/p5js/blob/master/Zoog.html?footer=0"></script>
+        <script src="https://gist-it.appspot.com/github/katyaa4703/p5js/blob/master/conditional-project.html?footer=0"></script>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -59,6 +71,3 @@
         });
     </script>
 </body>
-
-
-</html>
