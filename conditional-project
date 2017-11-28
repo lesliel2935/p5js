@@ -6,7 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
     
     <script>
-    var x;
+     var x;
     var y;
     var z;  
     var q;
@@ -15,8 +15,8 @@
     var speed;
     var score;
         function setup() {
-            createCanvas(500,400);
-        //variables set to value needed
+            createCanvas(800,600);
+             //variables set to value needed
             x = 250;
             y = 0;
             z = random(500)
@@ -27,11 +27,10 @@
             speedQ = 0.75
             speedT = 1
             speedK = 0.55
-           
         }
 
         function draw() {
-            background(0);
+             background(0);
                   rectMode(CENTER)
             
             //falling circles
@@ -41,10 +40,9 @@
             ellipse(k+random(20-21),speedK*y++,50,50)
             
             rect(x,400,100,100)//box
-        
         }
         
-        function keyPressed(){
+          function keyPressed(){
             if (keyCode === RIGHT_ARROW){
                 x = x+50
                 //box move to right
@@ -54,8 +52,7 @@
                 //box move to left
             }
         }
-  
-  </script>
+    </script>
 </head>
 
 <body>
@@ -70,7 +67,6 @@
         });
     </script>
 </body>
-
 
 
 </html>
